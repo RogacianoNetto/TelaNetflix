@@ -1,0 +1,116 @@
+:root { /* Declara variáveis padrões que você quer determinar em toda página*/
+        --vermelho: #E50914; /* Cor padrão usada no site da Netflix*/
+        --preta: #141414; /* Cor padrão usada no site da Netflix*/
+}
+
+* {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+}
+
+body{
+    background: var(--preta);
+    font-family:'Arial', Times, serif;
+    color: white; /* Alterou a cor do body para branco, mas a cor preta está sobreposta sendo predominante
+                    sobre a branca. Esta alteração para cor branca, alterou a cor da Frase HOUSE OF CARDS e a
+                    frase da sinopse.*/
+}
+
+header .container{
+    display: flex; /* Utiliza o flex box e alinha os elementos do container*/
+    flex-direction: row; /* Alinha os elementos no flex box. O padrão é "row". Caso eu não declare este elemento, virá da mesma forma, poi é padrão.*/
+    align-items: center; /* Alinha os itens no centro do flex box.*/
+    justify-content: space-between; /* o atributo space-between coloca um espaço entre o elemento <h2> e o elemento nav.*/
+}
+
+header .logo{
+    margin-left: 5px;
+    color: var(--vermelho);
+    font-family: 'Arial Black', Times;
+    font-size: 40px;
+}
+
+header nav a { /* Configura as âncoras (<a>) que estão dentro do elemento "nav".*/
+    text-decoration: none;
+    color: #AAA;
+    margin-right: 10px;
+}
+
+header nav a:hover{ /* Ao passar o mouse sobre as palavras, elas mudarão de cor.*/
+color:#fff;
+}
+
+/* Filme principal*/
+.filme-principal{
+    font-size: 16px;
+    background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)100%),url('/img/capa-house.jpg');
+    
+    height: 400px;
+    background-size: cover;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.filme-principal .descricao{
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
+
+.filme-principal .titulo{
+    margin-top: 15%;
+    font-size: 40px;
+    font-family:'Trebuchet MS', Arial, sans-serif;
+}
+
+.botao{
+    background-color:rgba(0,0,0,.5);
+    border: none;
+    color: white;
+
+    padding: 15px;
+    margin-right: 15px;
+    font-size: 12px;
+
+    cursor: pointer;
+    transition: .3s ease all;
+}
+
+.botao:hover{
+    background-color: white;
+    color: black;
+}
+
+.botao i{
+    margin-right: 8px;
+}
+
+.container{
+    margin-left: 20px;
+}
+
+.filme-principal .container{
+    width: 70%;
+}
+
+.box-filme{
+    height: 100%;
+    width: 100%;
+    display: block;
+}
+
+.carrossel-filmes{
+    margin-top: 5px;
+}
+
+
+
+
+
+
+/*<script src="https://kit.fontawesome.com/758317c8f9.js" crossorigin="anonymous"></script> 
+O link acima é do site "Font Awesome" para acesso dos ícones que deve ser acrescentado no arquivo index.html.
+O comando seguinte é fornecido pelo site para incluir no arquivo para chamar o ícone de play.*/
